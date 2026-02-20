@@ -5,14 +5,20 @@ const shoppingList = [
   { name: 'Tomato', cost: 0.95 },
   { name: 'Eggs', cost: 2.99 },
 ];
-// for (int i = 0; i < SIZE; i++) { ... }
-// how can we print out every item name in the shopping list?
-// for (let i = 0; i < shoppingList.length; i++) {
-//   console.log(shoppingList[i].name);
-// }
 
-for (const item of shoppingList) {
-  console.log(typeof(item.cost));
-  // console.log(item.name);
+// how can we print out every item name in the list?
+
+// 1. c-style for loop (not recommended)
+for (let i = 0; i < shoppingList.length; i++) {
+    console.log(shoppingList[i].name);
 }
-https://dev.to/mollynem/git-github--workflow-fundamentals-5496
+
+// 2. for in loop (not recommended for this)
+for (const i in shoppingList) {
+    console.log(shoppingList[i].name);
+}
+
+// 3. for of loop (recommended)
+for (const item of shoppingList) {
+    console.log(item.name);
+}
