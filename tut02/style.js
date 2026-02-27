@@ -18,7 +18,7 @@ userData.push({
   age: 19,
   height: 162,
 })
-
+// hi
 // how do we remove Jason from the array?
 userData = userData.filter(person => person.name != 'Jason');
 
